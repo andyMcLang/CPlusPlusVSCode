@@ -2,22 +2,18 @@
 
 using namespace std;
 
+void tulostaKerroin(const int *const osoitin)
+{
+    std::cout << "Kerroin: " << *osoitin << std::endl;
+}
+
 int main()
 {
-    bool b = 35;
-    cout << b << endl;
+    int luku = 5; // Kokonaisluku
 
-    int i = b;
-    cout << i << endl;
+    const int *const osoitin = &luku; // Vakio-osoitin, joka osoittaa luku-muuttujaan
 
-    i = 3.14;
-    cout << i << endl;
-
-    double pi = i;
-    cout << pi << endl;
-
-    unsigned char c = -1;
-    cout << c << endl;
+    tulostaKerroin(osoitin);
 
     return 0;
 }
