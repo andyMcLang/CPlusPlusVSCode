@@ -2,18 +2,24 @@
 
 using namespace std;
 
-void tulostaKerroin(const int *const osoitin)
+int recursiveSum(int n)
 {
-    std::cout << "Kerroin: " << *osoitin << std::endl;
+    if (n <= 1)
+    {
+        return n;
+    }
+    else
+    {
+        return n + recursiveSum(n - 1);
+    }
 }
 
 int main()
 {
-    int luku = 5; // Kokonaisluku
+    int value = 5;
+    int num = recursiveSum(value);
 
-    const int *const osoitin = &luku; // Vakio-osoitin, joka osoittaa luku-muuttujaan
-
-    tulostaKerroin(osoitin);
+    cout << "value " << value << " is recursive sum: " << num << endl;
 
     return 0;
 }
