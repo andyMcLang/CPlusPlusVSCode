@@ -1,25 +1,26 @@
 #include <iostream>
+#include <typeinfo>
+#include <string>
 
 using namespace std;
 
-int recursiveSum(int n)
-{
-    if (n <= 1)
-    {
-        return n;
-    }
-    else
-    {
-        return n + recursiveSum(n - 1);
-    }
-}
-
 int main()
 {
-    int value = 5;
-    int num = recursiveSum(value);
+    const int koko = 5;
+    string taulukko[koko];
+    taulukko[0] = "Toto";
+    taulukko[1] = "Keto";
+    taulukko[2] = "Nemo";
+    taulukko[3] = "Rita";
+    taulukko[4] = "Kato";
 
-    cout << "value " << value << " is recursive sum: " << num << endl;
+    for (int i = 0; i < koko; i++)
+    {
+        if (taulukko[i] == "Nemo")
+        {
+            cout << taulukko[i] << " löytyi!" << endl;
+        }
+    }
 
     return 0;
 }
