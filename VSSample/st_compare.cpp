@@ -4,17 +4,23 @@
 #include <string>
 using namespace std;
 
-int main() {
+int main()
+{
     string suurin;
     string s1 = "Grape";
     string s2 = "Aaa";
     string s3 = "Gym";
-    
-    if ((s1 > s2) && (s1 > s3)) {
+
+    if ((s1 > s2) && (s1 > s3))
+    {
         suurin = s1;
-    } else if ((s2 > s3) && (s2 > s1)) {
+    }
+    else if ((s2 > s3) && (s2 > s1))
+    {
         suurin = s2;
-    }else {
+    }
+    else
+    {
         suurin = s3;
     }
 
